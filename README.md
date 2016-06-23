@@ -41,6 +41,10 @@ It is not possible to copy to multiple destinations.
 
 **Building**
 
+If this is the first time the project has been accessed then you must
+create the ivy library.  To do so, right click on the `.ivy` file 'add
+dependencies'.
+
 To build in `Eclipse` click on the `ClusterCopier` java file and right click.
 Select `Export`/ as `Runnable Jar`.  Fill in the appropriate output names
 and main class.  I generally find that if you run the ClusterCopier
