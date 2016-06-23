@@ -4,11 +4,13 @@ Where:<br>
 *    If the first element of the list is a cluster element then the copy will treat the list as references to a single cluster.<br>
 *    If the first element of the list is a non-cluster instance then the list will be treated as a series of instances to copy from.<br>
 *    Only one (master) instance from a cluster is needed.<br>
-  `dhost` is the destination cluster or redis instance.  Only one instance may be specified.<br>
+
+`dhost` is the destination cluster or redis instance.  Only one instance may be specified.<br>
   `type` is the optional redis data type of the data to be copy.  Records not of this type are skipped.<br>
   `time` is the optional length of time to run in seconds.<br>
 *    Usefull for development purposes.  Default is as long as it takes.<br>
-  `match` is the redis pattern to use in the scan to copy.  Defaults to all keys<br>
+
+`match` is the redis pattern to use in the scan to copy.  Defaults to all keys<br>
 
 ----------------------
 
