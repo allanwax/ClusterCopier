@@ -1,14 +1,14 @@
-```Usage: java -Dshosts=host1:port1,... -Ddhost=host2:port2 -Dtype=... -Dtime=<seconds> -Dmatch='...' -cp <jarname> clustercopier.ClusterCopier 
-Where:
-  shosts is the source cluster or a list of non-cluster redis instances.
-    If the first element of the list is a cluster element then the copy will treat the list as references to a single cluster.
-    If the first element of the list is a non-cluster instance then the list will be treated as a series of instances to copy from.
-    Only one (master) instance from a cluster is needed.
-  dhost is the destination cluster or redis instance.  Only one instance may be specified.
-  type is the optional redis data type of the data to be copy.  Records not of this type are skipped.
-  time is the optional length of time to run in seconds.
-    Usefull for development purposes.  Default is as long as it takes.
-  match is the redis pattern to use in the scan to copy.  Defaults to all keys```
+Usage: java -Dshosts=host1:port1,... -Ddhost=host2:port2 -Dtype=... -Dtime=<seconds> -Dmatch='...' -cp <jarname> clustercopier.ClusterCopier <br>
+Where:<br>
+  `shosts` is the source cluster or a list of non-cluster redis instances.<br>
+    If the first element of the list is a cluster element then the copy will treat the list as references to a single cluster.<br>
+    If the first element of the list is a non-cluster instance then the list will be treated as a series of instances to copy from.<br>
+    Only one (master) instance from a cluster is needed.<br>
+  `dhost` is the destination cluster or redis instance.  Only one instance may be specified.<br>
+  `type` is the optional redis data type of the data to be copy.  Records not of this type are skipped.<br>
+  `time` is the optional length of time to run in seconds.<br>
+    Usefull for development purposes.  Default is as long as it takes.<br>
+  `match` is the redis pattern to use in the scan to copy.  Defaults to all keys<br>
 
 ----------------------
 
@@ -30,8 +30,8 @@ The `shosts` parameter is specified as one or more _comma_ separated
 _cluster_ then it is *assumed* that all the redis instances in the list
 are members of the **same** cluster.  _If_ the first is a _non-clustered_
 instance then the list is interpreted as _multiple_ sources from which
-keys are copied to the destination.  The destination is **only a single
-instance**.  It is not possible to copy to multiple destinations.
+keys are copied to the destination.  The destination is **only a single instance**.
+It is not possible to copy to multiple destinations.
 --------------------
 
 **Building**
