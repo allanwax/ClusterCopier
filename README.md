@@ -31,6 +31,7 @@ _cluster_ then it is *assumed* that all the redis instances in the list
 are members of the **same** cluster.  _If_ the first is a _non-clustered_
 instance then the list is interpreted as _multiple_ sources from which
 keys are copied to the destination.  The destination is *only a single instance* .
+
 It is not possible to copy to multiple destinations.
 --------------------
 
