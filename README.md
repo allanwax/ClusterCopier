@@ -27,10 +27,11 @@ can be specified to limit how long the copier runs.
 
 The `shosts` parameter is specified as one or more _comma_ separated
 `host:port` specifications.  _If_ the first element of the list is a
-_cluster_ then it is *assumed* that all the redis instances in the list
-are members of the **same** cluster.  _If_ the first is a _non-clustered_
-instance then the list is interpreted as _multiple_ sources from which
-keys are copied to the destination.  The destination is *only a single instance* .
+_cluster_ then it is *assumed* that all the redis instances in the
+list are members of the **same** cluster.  _If_ the first is a
+_non-clustered_ instance then the list is interpreted as _multiple_
+sources from which keys are copied to the destination.  The
+destination is *only a single* cluster or instance.
 
 It is not possible to copy to multiple destinations.
 
